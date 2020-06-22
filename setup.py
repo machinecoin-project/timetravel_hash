@@ -1,8 +1,8 @@
 from distutils.core import setup, Extension
 
-dash_hash_module = Extension('dash_hash',
-                                 sources = ['dashmodule.c',
-                                            'dash.c',
+timetravel_hash_module = Extension('timetravel_hash',
+                                 sources = ['timetravelmodule.c',
+                                            'timetravel.c',
                                             'sha3/blake.c',
                                             'sha3/bmw.c',
                                             'sha3/groestl.c',
@@ -16,7 +16,7 @@ dash_hash_module = Extension('dash_hash',
                                             'sha3/shavite.c'],
                                include_dirs=['.', './sha3'])
 
-setup (name = 'dash_hash',
+setup (name = 'timetravel_hash',
        version = '1.3.1',
-       description = 'Binding for Dash X11 proof of work hashing.',
-       ext_modules = [dash_hash_module])
+       description = 'Binding for Timetravel proof of work hashing.',
+       ext_modules = [timetravel_hash_module])
